@@ -1,0 +1,143 @@
+<!-- 
+    projects.ejs
+    Shane Koester
+    301344816
+    Sept. 23, 2023
+-->
+
+
+<%- include ('partials/header.ejs') %>
+    <%- include ('partials/main_nav.ejs') %>
+
+        <!--<img src="img/logo.png" alt="logo">-->
+
+        <main class="ontainer">
+            <div class="jumbotron">
+
+                <section class="projects">
+                    <div class="projects-title">
+                        <h1>Projects</h1>
+                    </div>
+                    <div class="projects-content">
+                        <div class="project-card">
+                            <a href="https://github.com/ItsMeShane/DEMO_3D" target="_blank class="project-card">
+                                <img src="\img\proj_3dEngine.png" alt="Project 1">
+                            </a>
+                            <div class="project-description">
+                                <h3>3D Game Engine</h3>
+                                <p>Created From Scratch In Java And OpenGL, This Capable Engine Supports A Variety
+                                    Of Modern Features. </p>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <a href="https://github.com/ItsMeShane/Chess_Engine" target="_blank  class="project-card" >
+                                <img src="\img\proj_chess.png" alt="Project 2">
+                            </a>
+                            <div class="project-description">
+                                <h3>Interactive Chess Bot</h3>
+                                <p>Sufficiently Optimized To Enhance Performance, This Chess Bot Is Capable Of
+                                    Beating Novice Chess Players.</p>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <a href="https://github.com/ItsMeShane/Sand_Sim" target="_blank" class="project-card">
+                                <img src="\img\proj_sand.png" alt="Project 3">
+                            </a>
+                            <div class="project-description">
+                                <h3>Sand Simulator</h3>
+                                <p>Fine-Tuned For Optimal Performance, This Sand Simulator Contains A Vast Variety
+                                    Of Particles For Countless Physics Interactions </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+        </main>
+        <style>
+            /* Add CSS for the main container */
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                /* Center vertically */
+                align-items: center;
+                /* Center horizontally */
+                height: 100vh;
+            }
+
+            .projects-title {
+                text-align: center;
+                padding: 20px;
+                background-color: #fff;
+
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                /* Add shadow for a modern look */
+                border-radius: 8px;
+                /* Rounded corners for a modern look */
+
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 20vh;
+                background-color: #f0f0f0;
+            }
+
+            .projects-content {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin: 25px;
+            }
+
+            .project-card {
+                user-select: none;
+                width: calc(33.33% - 20px);
+                /* Adjust the width as needed */
+                margin: 10px;
+                border: 1px solid #ccc;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                transition: transform 0.2s;
+                overflow: hidden;
+                /* Hide overflowing content */
+                text-align: center;
+            }
+
+            .project-card:hover {
+                transform: scale(1.05);
+            }
+
+            .project-card img {
+                width: 300px;
+                /* Set the width to 300px */
+                height: 300px;
+                /* Set the height to 300px */
+                object-fit: cover;
+                /* Maintain aspect ratio and cover the entire container */
+            }
+
+            .project-description {
+                padding: 10px;
+            }
+
+            .project-description h3 {
+                font-size: 18px;
+                margin: 0;
+            }
+
+            .project-description p {
+                font-size: 14px;
+                margin: 10px 0;
+            }
+        </style>
+
+
+
+        <%- include ('partials/bottom_nav.ejs') %>
+            <%- include ('partials/footer.ejs') %>

@@ -1,0 +1,82 @@
+<!-- 
+    index.ejs
+    Shane Koester
+    301344816
+    Sept. 23, 2023
+-->
+
+
+<%- include ('partials/header.ejs') %>
+    <%- include ('partials/main_nav.ejs') %>
+
+        <!--<img src="img/logo.png" alt="logo">-->
+
+        <main class="ontainer">
+            <div class="jumbotron">
+
+                <section class="home">
+
+                    <div class="home-content">
+                        <h1>Shane Koester</h1>
+                        <p>Passionate Software Engineer<br>Turning Ideas into Elegant Solutions</p>
+                        <a class="btn"  href="/about"> About Me</a>
+                    </div>
+
+                </section>
+
+            </div>
+        </main>
+        <style>
+            /* Add CSS for the main container */
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                /* Center vertically */
+                align-items: center;
+                /* Center horizontally */
+                height: 100vh;
+            }
+
+
+            .home-content {
+                width: 80%;
+                margin: 0 auto;
+                padding: 20px;
+                font-family: Arial, sans-serif;
+                text-align: center;
+                padding: 100px 0;
+            }
+
+ 
+            h1 {
+                font-size: 36px;
+                color: #333;
+                margin-bottom: 20px;
+                margin-top: 100px;
+            }
+
+            p {
+                font-size: 18px;
+                color: #666;
+            }
+
+            .btn {
+                display: inline-block;
+                padding: 10px 20px;
+                margin-top: 20px;
+                background-color: #007bff;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+            }
+
+            .btn:hover {
+                background-color: #0056b3;
+            }
+        </style>
+
+
+        <%- include ('partials/bottom_nav.ejs') %>
+            <%- include ('partials/footer.ejs') %>

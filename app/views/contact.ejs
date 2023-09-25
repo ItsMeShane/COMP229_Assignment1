@@ -1,0 +1,206 @@
+<!-- 
+    contact.ejs
+    Shane Koester
+    301344816
+    Sept. 23, 2023
+-->
+
+
+<%- include ('partials/header.ejs') %>
+    <%- include ('partials/main_nav.ejs') %>
+
+        <!--<img src="img/logo.png" alt="logo">-->
+
+        <main class="ontainer">
+            <div class="jumbotron">
+
+                <section class="contact">
+                    <div class="contact-title">
+                        <h1>Contact Me</h1>
+                    </div>
+                    <div class="contact-content">
+                        <div class="contact-panel">
+                            <h2>My Information</h2>
+                            <p>Name: Shane Koester</p>
+                            <p>Email: shanekoestercontact@gmail.com</p>
+                            <p>Phone: +1 (902) 754-1407</p>
+                        </div>
+                        <div class="contact-form">
+                            <h2>Please Complete The Form</h2>
+                            <form id="contact-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="first-name">First Name:</label>
+                                        <input type="text" id="first-name" name="first-name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="last-name">Last Name:</label>
+                                        <input type="text" id="last-name" name="last-name" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email">Email Address:</label>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contact-number">Phone Number:</label>
+                                        <input type="tel" id="contact-number" name="contact-number" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message:</label>
+                                    <textarea id="message" name="message" rows="4" required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Send Message" onclick="validateForm()">
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+        </main>
+        <script>
+            function validateForm() {
+                // Get  elements
+                var firstName = document.getElementById("first-name").value;
+                var lastName = document.getElementById("last-name").value;
+                var contactNumber = document.getElementById("contact-number").value;
+                var email = document.getElementById("email").value;
+                var message = document.getElementById("message").value;
+
+                //  validation 
+                if (firstName === "" || lastName === "" || contactNumber === "" || email === "" || message === "") {
+                    return false;
+                }
+
+                // Display confirmation alert
+                alert("Your Message Has Been Sent!");
+                return true;
+            }
+        </script>
+        <style>
+            /* Add CSS for the main container */
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                /* Center vertically */
+                align-items: center;
+                /* Center horizontally */
+                height: 100vh;
+            }
+
+            .contact-title {
+                text-align: center;
+                padding: 20px;
+                background-color: #fff;
+
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                /* Add shadow for a modern look */
+                border-radius: 8px;
+                /* Rounded corners for a modern look */
+
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 20vh;
+                background-color: #f0f0f0;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .contact-content {
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 20px;
+                display: flex;
+                flex-direction: row;
+                /* Change flex direction to horizontal */
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+
+            .contact-panel {
+                flex: 1;
+                /* Make it take up half of the available width */
+                padding-right: 10px;
+                /* Add some spacing between the two elements */
+                width: 500px;
+            }
+
+            .form-row {
+                display: flex;
+                justify-content: space-between;
+                /* Arrange elements side-by-side */
+            }
+
+            .form-group {
+                flex: 1;
+                margin-right: 10px;
+                /* Add some spacing between form groups */
+            }
+
+            .contact-panel,
+            .contact-form {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 20px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                width: 500px;
+                /* Ensure the form takes full width */
+                margin-bottom: 10px;
+                /* Add spacing at the bottom of the form */
+            }
+
+            .contact-form h2 {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            .contact-form label {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+
+            .contact-form input[type="text"],
+            .contact-form input[type="tel"],
+            .contact-form input[type="email"],
+            .contact-form textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                font-size: 16px;
+            }
+
+            .contact-form input[type="submit"] {
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                font-size: 18px;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+
+            .contact-form input[type="submit"]:hover {
+                background-color: #0056b3;
+            }
+        </style>
+
+
+        <%- include ('partials/bottom_nav.ejs') %>
+        <%- include ('partials/footer.ejs') %>

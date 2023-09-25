@@ -1,0 +1,159 @@
+<!-- 
+    about.ejs
+    Shane Koester
+    301344816
+    Sept. 23, 2023
+-->
+
+
+<%- include ('partials/header.ejs') %>
+    <%- include ('partials/main_nav.ejs') %>
+
+        <!--<img src="img/logo.png" alt="logo">-->
+        <main class="ontainer">
+            <div class="jumbotron">
+
+                <section class="about">
+                    <div class="about-title">
+                        <h1>About Me</h1>
+                    </div>
+
+                    <div class="holder">
+                        <div class="skills">
+                            <section class="skill">
+                                <h2>Software Development</h2>
+                                <p>
+                                    I have a strong background in software development with expertise in various
+                                    programming
+                                    languages and frameworks.
+                                </p>
+                            </section>
+
+                            <section class="skill">
+                                <h2>Agile Work Ethic</h2>
+                                <p>
+                                    My Agile work ethic allows me to adapt quickly to changing project requirements and
+                                    deliver high-quality results efficiently.
+                                </p>
+                            </section>
+
+                            <section class="skill">
+                                <h2>Artificial Intelligence</h2>
+                                <p>
+                                    I specialize in artificial intelligence and machine learning, leveraging data to
+                                    create
+                                    intelligent and automated solutions.
+                                </p>
+                            </section>
+                        </div>
+                        <div class="about-content">
+                            <p>I'm Shane Koester, an agile software engineering student on a mission to create
+                                innovative
+                                solutions through coding. Currently pursuing an Advanced Diploma in Software Engineering
+                                Technology with a focus on AI at Centennial College, I excel in Java, Python, C#, C++,
+                                HTML,
+                                JavaScript, CSS, and SQL. With strong problem-solving skills, adaptability, and a knack
+                                for
+                                teamwork, I believe in the power of effective communication to drive collaborative
+                                success.
+                                My Projectss, like a 3D engine using OpenGL, a Chess Engine in Java, and a dynamic Sand
+                                Simulator, showcase my ability to transform ideas into elegant, efficient code. Join me
+                                in
+                                my quest to push the boundaries of possibility in the world of software engineering.
+                        </div>
+                    </div>
+                </section>
+
+
+            </div>
+        </main>
+        <style>
+            /* Add CSS for the main container */
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                /* Center vertically */
+                align-items: center;
+                /* Center horizontally */
+                height: 100vh;
+            }
+
+            .about-title {
+                text-align: center;
+                padding: 20px;
+                background-color: #fff;
+
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                /* Add shadow for a modern look */
+                border-radius: 8px;
+                /* Rounded corners for a modern look */
+
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 20vh;
+                background-color: #f0f0f0;
+            }
+
+            .about-content {
+                text-align: center;
+                padding: 20px;
+                flex: 1;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 50vh;
+            }
+
+
+            p {
+                max-width: 600px;
+                margin-left: 25px;
+                margin-right: 25px;
+            }
+
+            .skills {
+                flex: 1;
+                margin: 15px;
+                padding: 20px;
+                font-family: Arial, sans-serif;
+                justify-content: left;
+                border-right: 1px solid #ccc;
+            }
+
+
+
+            .holder {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+
+
+
+            /* Style the skill sections */
+            .skill {
+                margin-bottom: 20px;
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 20px;
+            }
+
+            .skill h2 {
+                font-size: 24px;
+                color: #333;
+            }
+
+            .skill p {
+                font-size: 16px;
+                color: #666;
+            }
+        </style>
+
+        <%- include ('partials/bottom_nav.ejs') %>
+            <%- include ('partials/footer.ejs') %>

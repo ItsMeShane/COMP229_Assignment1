@@ -1,0 +1,166 @@
+<!-- 
+    services.ejs
+    Shane Koester
+    301344816
+    Sept. 23, 2023
+-->
+
+
+<%- include ('partials/header.ejs') %>
+    <%- include ('partials/main_nav.ejs') %>
+
+        <!--<img src="img/logo.png" alt="logo">-->
+
+        <main class="ontainer">
+            <div class="jumbotron">
+
+                <section class="services">
+                    <div class="services-title">
+                        <h1>Services</h1>
+                    </div>
+                    <div class="services-content">
+                        <div class="service-card">
+                            <div class="service-description">
+                                <h3>Software Development</h3>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-description">
+                                <h3>Agile</h3>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-description">
+                                <h3>Data Analytics </h3>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-description">
+                                <h3>Web Development</h3>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-description">
+                                <h3>Java</h3>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-description">
+                                <h3>C++</h3>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-description">
+                                <h3>C#</h3>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-description">
+                                <h3>Python</h3>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-description">
+                                <h3>Artificial Intelligence</h3>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-description">
+                                <h3>Git Version Control</h3>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-description">
+                                <h3>Office 365</h3>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-description">
+                                <h3>Discrete Mathematics</h3>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+        </main>
+        <style>
+            /* Add CSS for the main container */
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                /* Center vertically */
+                align-items: center;
+                /* Center horizontally */
+                height: 100vh;
+            }
+
+            .services-title {
+                text-align: center;
+                padding: 20px;
+                background-color: #fff;
+
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                /* Add shadow for a modern look */
+                border-radius: 8px;
+                /* Rounded corners for a modern look */
+
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 20vh;
+                background-color: #f0f0f0;
+            }
+
+            .services-content {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin: 25px;
+            }
+
+            .service-card {
+                user-select: none;
+                width: calc(33.33% - 20px);
+                /* Adjust the width for three columns */
+                margin: 10px;
+                border: 1px solid #ccc;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                transition: transform 0.2s;
+                overflow: hidden;
+                text-align: center;
+            }
+
+            .service-card:hover {
+                transform: scale(1.05);
+            }
+
+            .service-card img {
+                width: 300px;
+                height: 300px;
+                object-fit: cover;
+            }
+
+            .service-description {
+                padding: 10px;
+            }
+
+            .service-description h3 {
+                font-size: 18px;
+                margin: 0;
+            }
+
+            .service-description p {
+                font-size: 14px;
+                margin: 10px 0;
+            }
+        </style>
+
+
+        <%- include ('partials/bottom_nav.ejs') %>
+            <%- include ('partials/footer.ejs') %>
